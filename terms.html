@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Shuham Debnath</title>
+  <meta name="description" content="Terms of Service for Shuham Debnath's mobile apps and website. Read the terms governing your use of these services.">
+  <meta name="author" content="Shuham Debnath">
+  <meta property="og:title" content="Terms of Service — Shuham Debnath">
+  <meta property="og:description" content="Terms of Service for Shuham Debnath's mobile apps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shuhamdebnath.in/terms.html">
+  <meta property="og:image" content="https://shuhamdebnath.in/assets/hero-phone.png">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Terms-specific aurora bg (light, behind main content) */
+    .terms-aurora-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(61, 92, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.08) 0%, transparent 40%);
+    }
+
+    /* Terms agreement card (mobile trust card) */
+    .agreement-card {
+      background: var(--color-surface-container-lowest);
+      border-radius: 20px;
+      padding: var(--space-6);
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--color-surface-container-high);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: var(--space-8);
+    }
+
+    .agreement-card__glow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 128px;
+      height: 128px;
+      background: rgba(186, 195, 255, 0.30);
+      border-radius: 50%;
+      filter: blur(32px);
+      transform: translate(50%, -50%);
+      pointer-events: none;
+    }
+
+    .agreement-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--color-surface-container);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-container);
+      margin-bottom: var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .agreement-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-size-headline-md);
+      font-weight: 600;
+      color: var(--color-on-surface);
+      margin-bottom: var(--space-2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .agreement-card__body {
+      font-size: var(--text-size-body-md);
+      color: var(--color-on-surface-variant);
+      line-height: var(--text-lh-body-md);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Terms content sections have border-bottom dividers */
+    .terms-section {
+      scroll-margin-top: calc(var(--nav-height-mobile) + var(--space-8));
+      padding-bottom: var(--space-12);
+      border-bottom: 1px solid var(--color-surface-container-highest);
+      margin-bottom: var(--space-12);
+    }
+
+    .terms-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .terms-section__inner {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-6);
+    }
+
+    .terms-section__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-container-low);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .terms-section__body {
+      flex: 1;
+    }
+
+    .terms-section__title {
+      font-family: var(--font-display);
+      font-size: var(--text-size-headline-md);
+      font-weight: 600;
+      color: var(--color-on-background);
+      margin-bottom: var(--space-4);
+    }
+
+    .terms-section__text {
+      font-size: var(--text-size-body-md);
+      line-height: var(--text-lh-body-md);
+      color: var(--color-on-surface-variant);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .terms-section__text a {
+      color: var(--color-primary);
+    }
+
+    .terms-section__text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Terms sidebar acknowledgment card */
+    .terms-ack-card {
+      background: var(--color-surface-container-low);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      margin-top: var(--space-8);
+    }
+
+    .terms-ack-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-base);
+      background: var(--color-primary-fixed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    .terms-ack-text {
+      font-size: var(--text-size-body-md);
+      color: var(--color-on-surface);
+      line-height: var(--text-lh-body-md);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Terms aurora bg -->
+  <div class="terms-aurora-bg" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       LEGAL NAV
+       ===================================================== -->
+  <header class="legal-nav" role="banner">
+    <div class="legal-nav__inner">
+
+      <!-- Brand -->
+      <div class="legal-nav__brand">
+        <div class="legal-nav__badge" aria-hidden="true">SD</div>
+        <div>
+          <div class="legal-nav__name">Shuham Debnath</div>
+          <div class="legal-nav__role">App Studio</div>
+        </div>
+      </div>
+
+      <!-- Back to home -->
+      <a class="legal-nav__back" href="index.html" id="back-to-home">
+        <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">arrow_back</span>
+        Back to Home
+      </a>
+
+    </div>
+  </header>
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+  <main class="legal-main" role="main">
+
+    <!-- Page header -->
+    <div class="legal-header">
+      <div class="legal-chip">
+        <span class="legal-chip__dot" aria-hidden="true"></span>
+        <span class="legal-chip__text">Last Updated: July 5, 2026</span>
+      </div>
+      <h1 class="legal-page-title">Terms of Service</h1>
+      <p class="legal-intro">
+        These Terms of Service govern your use of our mobile apps and website. This policy applies to all apps and services published by Shuham Debnath; individual apps may reference these terms directly from their own store listing.
+        By accessing or using our apps or website, you agree to be bound by these terms.
+      </p>
+    </div>
+
+    <!-- Mobile TOC chip row (hidden at ≥768px via CSS) -->
+    <nav class="toc-chips" aria-label="Jump to section" id="terms-toc-chips">
+      <div class="toc-chips__inner">
+        <a class="toc-chip toc-chip--active" href="#use" id="chip-use">Use of the App</a>
+        <a class="toc-chip toc-chip--inactive" href="#ip" id="chip-ip">Intellectual Property</a>
+        <a class="toc-chip toc-chip--inactive" href="#warranty" id="chip-warranty">No Warranty</a>
+        <a class="toc-chip toc-chip--inactive" href="#liability" id="chip-liability">Limitation of Liability</a>
+        <a class="toc-chip toc-chip--inactive" href="#changes" id="chip-changes">Changes to These Terms</a>
+        <a class="toc-chip toc-chip--inactive" href="#contact" id="chip-contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Mobile agreement card (hidden at ≥768px) -->
+    <div class="agreement-card" id="mobile-agreement-card">
+      <div class="agreement-card__glow" aria-hidden="true"></div>
+      <div class="agreement-card__icon" aria-hidden="true">
+        <span class="material-symbols-outlined" style="font-size:24px;">gavel</span>
+      </div>
+      <div class="agreement-card__title">Agreement to Terms</div>
+      <p class="agreement-card__body">
+        By using our apps or website, you agree to these Terms of Service. If you disagree with any part of the terms, you may not access the service.
+      </p>
+    </div>
+
+    <!-- Two-column body -->
+    <div class="legal-body">
+
+      <!-- Sidebar TOC (shown at ≥768px via CSS) -->
+      <aside class="legal-sidebar" aria-label="Table of contents">
+        <div class="legal-sidebar__sticky">
+
+          <div class="toc-card">
+            <div class="toc-card__header">
+              <div class="toc-card__icon" aria-hidden="true">
+                <span class="material-symbols-outlined" style="font-size:18px;">gavel</span>
+              </div>
+              <div class="toc-card__title">On this page</div>
+            </div>
+            <nav class="toc-nav" id="terms-toc-nav" aria-label="Terms of service sections" style="gap:var(--space-3);">
+              <a class="toc-link-terms" href="#use" id="toc-use">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">smartphone</span>
+                Use of the App
+              </a>
+              <a class="toc-link-terms" href="#ip" id="toc-ip">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">shield</span>
+                Intellectual Property
+              </a>
+              <a class="toc-link-terms" href="#warranty" id="toc-warranty">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">warning</span>
+                No Warranty
+              </a>
+              <a class="toc-link-terms" href="#liability" id="toc-liability">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">balance</span>
+                Limitation of Liability
+              </a>
+              <a class="toc-link-terms" href="#changes" id="toc-changes">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">update</span>
+                Changes to These Terms
+              </a>
+              <a class="toc-link-terms" href="#contact" id="toc-contact">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">mail</span>
+                Contact
+              </a>
+            </nav>
+
+            <!-- Acknowledgment card inside sidebar -->
+            <div class="terms-ack-card">
+              <div class="terms-ack-icon" aria-hidden="true">
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <p class="terms-ack-text">
+                By using our apps or website, you acknowledge that you have read, understood, and agree to these terms.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <div class="legal-content" aria-label="Terms of service content">
+
+        <!-- Section 1: Use of the App -->
+        <section class="terms-section" id="use" aria-labelledby="heading-use">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">smartphone</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-use">Use of the App</h2>
+              <div class="terms-section__text">
+                <p>You agree to use our apps for lawful purposes only and in accordance with these Terms. You must not use the apps in any way that violates applicable laws or regulations or that interferes with or disrupts the apps or servers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Intellectual Property -->
+        <section class="terms-section" id="ip" aria-labelledby="heading-ip">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">shield</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-ip">Intellectual Property</h2>
+              <div class="terms-section__text">
+                <p>All content, features, and functionality of our apps and website, including but not limited to text, graphics, logos, icons, and software, are the property of Shuham Debnath and are protected by intellectual property laws. You may not copy, modify, distribute, or reproduce any part of the apps or website without our prior written permission.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: No Warranty -->
+        <section class="terms-section" id="warranty" aria-labelledby="heading-warranty">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">warning</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-warranty">No Warranty</h2>
+              <div class="terms-section__text">
+                <p>Our apps are provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not warrant that the apps will be uninterrupted, error-free, or free from defects, or that any issues will be corrected.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Limitation of Liability -->
+        <section class="terms-section" id="liability" aria-labelledby="heading-liability">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">balance</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-liability">Limitation of Liability</h2>
+              <div class="terms-section__text">
+                <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of our apps.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Changes to These Terms -->
+        <section class="terms-section" id="changes" aria-labelledby="heading-changes">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">update</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-changes">Changes to These Terms</h2>
+              <div class="terms-section__text">
+                <p>We may update these Terms of Service from time to time. When we do, we will update the "Last updated" date above. We encourage you to review this page periodically to stay informed about any changes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section class="terms-section" id="contact" aria-labelledby="heading-contact">
+          <div class="terms-section__inner">
+            <div class="terms-section__icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:28px;">mail</span>
+            </div>
+            <div class="terms-section__body">
+              <h2 class="terms-section__title" id="heading-contact">Contact</h2>
+              <div class="terms-section__text">
+                <p>If you have any questions or concerns about these Terms of Service, please contact us at:</p>
+                <a href="mailto:shuhamdev@gmail.com" id="terms-contact-link">shuhamdev@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /legal-content -->
+
+    </div><!-- /legal-body -->
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="legal-footer" role="contentinfo">
+    <div class="legal-footer__inner container">
+
+      <div class="legal-footer__brand">
+        <div style="width:32px;height:32px;border-radius:var(--radius-sm);background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:13px;font-weight:700;" aria-hidden="true">SD</div>
+        <div>
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--color-on-primary-fixed);">Shuham Debnath</div>
+          <div class="legal-footer__copyright">© <span id="copyright-year"></span> Shuham Debnath.</div>
+        </div>
+      </div>
+
+      <nav class="legal-footer__nav" aria-label="Legal footer navigation">
+        <a class="legal-footer__nav-link" href="privacy.html" id="footer-privacy-link">Privacy Policy</a>
+        <span class="legal-footer__sep" aria-hidden="true">|</span>
+        <a class="legal-footer__nav-link legal-footer__nav-link--active" href="terms.html" id="footer-terms-link">Terms of Service</a>
+        <span class="legal-footer__sep" aria-hidden="true">|</span>
+        <a class="legal-footer__nav-link" href="mailto:shuhamdev@gmail.com" id="footer-support-link">Support</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

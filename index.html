@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shuham Debnath — App Studio</title>
+  <meta name="description" content="Shuham Debnath is an app development studio from India building simple, useful apps for Android and iOS. Privacy-first. Clean code.">
+  <meta name="author" content="Shuham Debnath">
+  <meta property="og:title" content="Shuham Debnath — App Studio">
+  <meta property="og:description" content="Building simple, useful mobile apps that respect your time and privacy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shuhamdebnath.in">
+  <meta property="og:image" content="https://shuhamdebnath.in/assets/hero-phone.png">
+  <meta name="theme-color" content="#0A0B10">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       TOP NAVIGATION
+       ===================================================== -->
+  <nav class="nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a class="nav__logo" href="#" aria-label="Shuham Debnath – Home">
+        <div class="nav__logo-badge" aria-hidden="true">SD</div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Shuham Debnath</span>
+          <span class="nav__logo-role">App Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav links -->
+      <div class="nav__links" role="menubar">
+        <a class="nav__link nav__link--active" href="#about" role="menuitem">About</a>
+        <a class="nav__link" href="#apps" role="menuitem">Apps</a>
+        <a class="nav__link" href="#contact" role="menuitem">Support</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <a class="nav__cta" href="#contact" id="nav-cta">
+        <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">mail</span>
+        Get in Touch
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="material-symbols-outlined" id="hamburger-icon" aria-hidden="true">menu</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a class="mobile-nav__link" href="#about" id="mnav-about">About</a>
+    <a class="mobile-nav__link" href="#apps" id="mnav-apps">Apps</a>
+    <a class="mobile-nav__link" href="#contact" id="mnav-support">Support</a>
+    <a class="mobile-nav__cta" href="#contact" id="mnav-cta">Get in Touch</a>
+  </div>
+
+
+  <!-- =====================================================
+       HERO SECTION
+       ===================================================== -->
+  <header class="hero" id="hero">
+    <!-- Aurora background blobs -->
+    <div class="hero__aurora" aria-hidden="true"></div>
+
+    <div class="hero__inner container">
+
+      <!-- Left: Text content -->
+      <div class="hero__content fade-in-up">
+
+        <!-- Badge pills -->
+        <div class="hero__badges">
+          <span class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            <span class="hero__badge-text">App Studio</span>
+          </span>
+          <span class="hero__badge">
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size:14px; color:#4CAF50;">android</span>
+            <span class="hero__badge-text">Android · iOS</span>
+            <!-- Apple silhouette icon -->
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-primary-fixed-dim); flex-shrink:0; display:block;">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="hero__title">
+          We build simple,<br>
+          useful <span class="hero__title-accent">mobile apps.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero__subtitle">
+          Thoughtful design. Smooth performance.<br>Real value for everyday life.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero__ctas">
+          <a class="btn btn-primary" href="#apps" id="hero-cta-apps">
+            Explore Our Apps
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">arrow_forward</span>
+          </a>
+          <a class="btn btn-ghost" href="#contact" id="hero-cta-contact">
+            Get in Touch
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">mail</span>
+          </a>
+        </div>
+
+        <!-- Feature pills -->
+        <div class="hero__features">
+          <div class="hero__feature">
+            <div class="hero__feature-icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:18px;">code</span>
+            </div>
+            <div>
+              <div class="hero__feature-label">Clean Code</div>
+              <div class="hero__feature-desc">Maintainable<br>&amp; Scalable</div>
+            </div>
+          </div>
+          <div class="hero__feature">
+            <div class="hero__feature-icon" aria-hidden="true">
+              <span class="material-symbols-outlined" style="font-size:18px;">smartphone</span>
+            </div>
+            <div>
+              <div class="hero__feature-label">Privacy First</div>
+              <div class="hero__feature-desc">User data<br>matters</div>
+            </div>
+          </div>
+          <div class="hero__feature" aria-hidden="true" style="display:none;" id="feature-always-improving">
+            <div class="hero__feature-icon">
+              <span class="material-symbols-outlined" style="font-size:18px;">rocket_launch</span>
+            </div>
+            <div>
+              <div class="hero__feature-label">Always Improving</div>
+              <div class="hero__feature-desc">Learning, building,<br>shipping</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hero__content -->
+
+      <!-- Right: Phone mockup (HTML/CSS, no raster image) -->
+      <div class="hero__visual fade-in-up" style="transition-delay:200ms;" aria-hidden="true">
+        <div class="phone-frame" role="img" aria-label="App preview showing task tracking interface">
+          <!-- Status bar -->
+          <div class="phone-status">
+            <span class="phone-status__time">9:41</span>
+            <div class="phone-status__icons">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="3" width="3" height="8" rx="1" opacity="0.4"/><rect x="4" y="2" width="3" height="9" rx="1" opacity="0.6"/><rect x="8" y="0" width="3" height="11" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 1.5C10.6 1.5 13 2.6 14.6 4.4L16 3C14 1.1 11.1 0 8 0S2 1.1 0 3l1.4 1.4C3 2.6 5.4 1.5 8 1.5z" opacity="0.4"/><path d="M8 4.5c1.7 0 3.2.7 4.3 1.8L13.7 5C12.2 3.5 10.2 2.5 8 2.5S3.8 3.5 2.3 5l1.4 1.3C4.8 5.2 6.3 4.5 8 4.5z" opacity="0.7"/><circle cx="8" cy="10" r="2"/></svg>
+              <svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0" y="1" width="22" height="10" rx="2" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="currentColor"/><path d="M23 4v4a2 2 0 0 0 0-4z" opacity="0.5"/></svg>
+            </div>
+          </div>
+          <!-- App content -->
+          <div class="phone-content">
+            <!-- Greeting -->
+            <div class="phone-greeting">
+              <span class="phone-greeting__sub">Good morning,</span>
+              <div class="phone-greeting__main">
+                <span>Stay focused!</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFD04B" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#FFD04B" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <!-- Progress card -->
+            <div class="phone-card">
+              <div class="phone-card__row">
+                <span class="phone-card__label">Today's Progress</span>
+                <span class="phone-card__pct">50%</span>
+              </div>
+              <div class="phone-progress">
+                <div class="phone-progress__fill"></div>
+              </div>
+              <div class="phone-card__sub">6 / 12 Tasks Complete</div>
+            </div>
+            <!-- Upcoming tasks -->
+            <div class="phone-section-label">Upcoming</div>
+            <div class="phone-tasks">
+              <div class="phone-task">
+                <span class="phone-task__dot" style="background:#3D5CFF;"></span>
+                <span class="phone-task__name">Design review</span>
+                <span class="phone-task__time">10:00 AM</span>
+              </div>
+              <div class="phone-task">
+                <span class="phone-task__dot" style="background:#4CAF50;"></span>
+                <span class="phone-task__name">Team standup</span>
+                <span class="phone-task__time">11:30 AM</span>
+              </div>
+              <div class="phone-task">
+                <span class="phone-task__dot" style="background:#FFA726;"></span>
+                <span class="phone-task__name">Client call</span>
+                <span class="phone-task__time">2:00 PM</span>
+              </div>
+            </div>
+            <!-- Focus timer -->
+            <div class="phone-timer">
+              <div>
+                <div class="phone-timer__label">Focus Timer</div>
+                <div class="phone-timer__value">25:00</div>
+              </div>
+              <button class="phone-timer__btn" tabindex="-1">Start</button>
+            </div>
+          </div>
+          <!-- Bottom nav -->
+          <div class="phone-nav">
+            <span class="phone-nav__icon phone-nav__icon--active">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </span>
+            <span class="phone-nav__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity="0.5"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm6 13H6v-.75C6 16 9 14 12 14s6 2 6 3.25V19z"/></svg>
+            </span>
+            <span class="phone-nav__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity="0.5"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </span>
+            <span class="phone-nav__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity="0.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </span>
+          </div>
+        </div>
+        <!-- Plain caption -->
+        <p class="hero__caption">Ideas into apps. Apps into impact.</p>
+      </div>
+
+    </div><!-- /hero__inner -->
+
+    <!-- Wave curve transition to main -->
+    <div class="section-curve" aria-hidden="true">
+      <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+        <path class="shape-fill" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.93,197.87,112.5C238.45,108.06,279.7,98.92,321.39,56.44Z"/>
+      </svg>
+    </div>
+
+  </header><!-- /hero -->
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+  <main>
+
+    <!-- =================================================
+         ABOUT SECTION
+         ================================================= -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Copy -->
+          <div class="about__copy fade-in-up">
+            <div class="section-label">
+              <span class="section-label__dot" aria-hidden="true"></span>
+              <span class="section-label__text">About Us</span>
+            </div>
+            <h2 class="about__title" id="about-heading">
+              Welcome to<br>
+              Shuham Debnath.<br>
+              Indie development from <span class="about__title-accent">India.</span>
+            </h2>
+            <div class="about__body">
+              <p>We create clean, reliable, and user-friendly mobile apps for Android and iOS.</p>
+              <p>Every app we build is a product of curiosity, problem-solving, and a commitment to privacy and performance.</p>
+            </div>
+            <details class="about__more" id="about-learn-more">
+              <summary class="btn btn-outline" style="width:fit-content; margin-top:var(--space-2); list-style:none; cursor:pointer;">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">person</span>
+                Know More About Us
+              </summary>
+              <div class="about__more-body">
+                <p>We are a passionate team dedicated to building tools that make everyday life simpler and more organised. We take a privacy-first approach — every app we ship stores its data locally on your device unless there's a compelling reason to do otherwise.</p>
+                <p>When we're not coding, we're exploring new app ideas, learning about design systems, and figuring out how to make complex things feel effortless. CareLog is our first published app, and it's just the start.</p>
+              </div>
+            </details>
+          </div>
+
+          <!-- Stats card -->
+          <div class="fade-in-up" style="transition-delay:150ms;">
+            <div class="stats-card">
+              <div class="stats-grid fade-stagger">
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:24px;">rocket_launch</span>
+                  </div>
+                  <div>
+                    <div class="stat-title">1 App Live</div>
+                    <div class="stat-desc">More in<br>Development</div>
+                  </div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:24px;">code</span>
+                  </div>
+                  <div>
+                    <div class="stat-title">Indie Builder</div>
+                    <div class="stat-desc">Design, Code,<br>Deploy</div>
+                  </div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:24px;">verified_user</span>
+                  </div>
+                  <div>
+                    <div class="stat-title">Privacy First</div>
+                    <div class="stat-desc">No unnecessary<br>data collection</div>
+                  </div>
+                </div>
+
+              </div><!-- /stats-grid -->
+            </div><!-- /stats-card -->
+          </div>
+
+        </div><!-- /about__grid -->
+      </div>
+    </section>
+
+
+    <!-- =================================================
+         APPS SECTION
+         ================================================= -->
+    <section class="apps section" id="apps" aria-labelledby="apps-heading">
+      <div class="container">
+
+        <div class="apps__header">
+          <div class="section-label">
+            <span class="section-label__dot" aria-hidden="true"></span>
+            <span class="section-label__text">Our Apps</span>
+          </div>
+          <div class="apps__header-row">
+            <h2 class="apps__title" id="apps-heading">Apps We've Built</h2>
+          </div>
+        </div>
+
+        <!-- App cards grid -->
+        <div class="apps__grid fade-stagger">
+
+          <!-- App Card 1: CareLog -->
+          <article class="app-card fade-in-up" id="card-carelog">
+            <div class="app-card__header">
+              <div class="app-card__identity">
+                <div class="app-card__icon" style="background:#2C62FF;" aria-hidden="true">
+                  <span class="material-symbols-outlined" style="font-size:28px;">health_and_safety</span>
+                </div>
+                <h3 class="app-card__name">CareLog</h3>
+              </div>
+              <span class="app-card__badge" style="background:rgba(61,92,255,0.10); color:var(--color-primary-container);">Health</span>
+            </div>
+            <p class="app-card__desc">
+              A fully private, offline app designed to help caregivers track and manage care effortlessly.
+            </p>
+            <div class="app-card__stores">
+              <a class="store-btn" id="carelog-playstore" href="https://play.google.com/store/apps/details?id=com.shuham.carelog" target="_blank" aria-label="CareLog on Play Store">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">play_arrow</span>
+                Play Store
+              </a>
+              <a class="store-btn" id="carelog-appstore" href="https://apps.apple.com/in/app/carelog-caregiver-tracker/id6770110574" target="_blank" aria-label="CareLog on App Store">
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">apps</span>
+                App Store
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /apps__grid -->
+
+        <!-- Privacy banner -->
+        <div class="privacy-banner fade-in-up">
+          <div class="privacy-banner__text">
+            <span class="material-symbols-outlined" aria-hidden="true" style="color:var(--color-primary-container); font-size:20px; flex-shrink:0;">shield_person</span>
+            <span>All apps respect your privacy. No unnecessary data collection.</span>
+          </div>
+          <a class="privacy-banner__link" href="privacy.html" id="privacy-banner-link">
+            Read our Privacy Policy
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =================================================
+         CONTACT SECTION
+         ================================================= -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__grid">
+
+          <!-- Copy -->
+          <div class="contact__copy fade-in-up">
+            <div class="section-label">
+              <span class="section-label__dot" aria-hidden="true"></span>
+              <span class="section-label__text">Contact / Support</span>
+            </div>
+            <h2 class="contact__title" id="contact-heading">
+              Have a question or<br>need help?
+            </h2>
+            <p class="contact__subtitle">We're always happy to hear from you.</p>
+          </div>
+
+          <!-- Contact card -->
+          <div class="fade-in-up" style="transition-delay:100ms; flex:1;">
+            <div class="contact__card">
+              <div class="contact__email-block">
+                <div class="contact__email-icon" aria-hidden="true">
+                  <span class="material-symbols-outlined" style="font-size:32px;">mail</span>
+                </div>
+                <div>
+                  <div class="contact__email-label">Email</div>
+                  <a class="contact__email-addr" href="mailto:shuhamdev@gmail.com" id="contact-email-link">shuhamdev@gmail.com</a>
+                  <div class="contact__email-note">We usually reply within 24–48 hours.</div>
+                </div>
+              </div>
+              <a class="btn btn-primary" href="mailto:shuhamdev@gmail.com" id="contact-send-email" style="white-space:nowrap;">
+                Send an Email
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /contact__grid -->
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__main">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a class="footer__logo" href="#" aria-label="Shuham Debnath – Home">
+            <div class="footer__logo-badge" aria-hidden="true">SD</div>
+            <div>
+              <div class="footer__logo-name">Shuham Debnath</div>
+              <div class="footer__logo-role">App Studio</div>
+            </div>
+          </a>
+          <p class="footer__tagline">
+            Building simple and useful mobile apps that respect your time and privacy.
+          </p>
+          <div class="footer__socials">
+            <a class="social-icon" href="https://github.com/ShuhamDebnath" target="_blank" id="footer-github" aria-label="GitHub">
+              <svg aria-hidden="true" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/shuham-debnath-74970a292/" target="_blank" id="footer-linkedin" aria-label="LinkedIn">
+              <svg aria-hidden="true" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a class="social-icon" href="mailto:shuhamdev@gmail.com" id="footer-email" aria-label="Email Shuham">
+              <span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">mail</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <nav aria-label="Quick links">
+          <div class="footer__col-title">Quick Links</div>
+          <div class="footer__links">
+            <a class="footer__link" href="#" id="footer-home">Home</a>
+            <a class="footer__link" href="#apps" id="footer-apps">Apps</a>
+            <a class="footer__link" href="#contact" id="footer-support">Support</a>
+          </div>
+        </nav>
+
+        <!-- Legal -->
+        <nav aria-label="Legal links">
+          <div class="footer__col-title">Legal</div>
+          <div class="footer__links">
+            <a class="footer__link" href="privacy.html" id="footer-privacy">Privacy Policy</a>
+            <a class="footer__link" href="terms.html" id="footer-terms">Terms of Service</a>
+          </div>
+        </nav>
+
+      </div><!-- /footer__main -->
+
+      <!-- Footer bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">© <span id="copyright-year"></span> Shuham Debnath.</p>
+        <p class="footer__made-with">
+          Made with
+          <span class="footer__heart material-symbols-outlined" aria-hidden="true" style="font-size:16px; font-variation-settings:'FILL' 1;">favorite</span>
+          in India
+        </p>
+      </div>
+
+    </div><!-- /container -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
